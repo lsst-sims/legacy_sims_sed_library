@@ -20,7 +20,7 @@ will run the script on the currently setup version of sims_sed_library
 
 python validate_sed_contents.py --root sed/library/dir
 
-will runt he script on the version of sims_sed_library whose root directory is
+will run the script on the version of sims_sed_library whose root directory is
 sed/library/dir
 """
 
@@ -39,7 +39,7 @@ def _verify_sed_files(dir_name):
     If the dir_name contains another dir, recursively call itself.
 
     Return a list of tuples.  Each tuple contains the name of the file
-    that failed the test and why (either 'nan' or 'header'
+    that failed the test and why (either 'nan' or 'header')
     """
     dtype = np.dtype([('wv', float), ('flux', float)])
     failures = []
