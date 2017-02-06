@@ -61,7 +61,10 @@ def _verify_sed_files(dir_name):
                 failures.append((full_name, 'could not load'))
                 continue
 
-            # check that the last line of the header ends as expected
+            # Check that the last line of the header ends as expected.
+            # Headers usually end with something like
+            # Flambda (ergs/s/cm^2/nm)
+            # We will check for the ')' followed by a newline
             if full_name.endswith('.gz'):
                 open_fn = gzip.open
             else:
